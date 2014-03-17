@@ -49,7 +49,12 @@ printf("Circle area is %.2f.\n",
 system("pause");
 }
 
+/*  Zmienne zadeklarowane w strukturze mogą być wywoływane w funckji main(). Natomiast do 
+zmiennych z klasy można odwołać się w funkcji main() tylko przy pomocy funkcji zadeklarowanych wewnątrz klasy.
 
+Do zmiennnych w klasie odwołujemy się przy pomocy specjalnych publicznych funkcji by zmniejszyć ryzyko
+"zniszczenia" zmiennych przez przypadek lub błąd użytkownika. Celowe niszczenie jest wciąż możliwe.
+Funkcje public zmniejszają tylko ryzyko.*/
 
 
 
