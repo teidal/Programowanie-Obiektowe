@@ -30,3 +30,12 @@ public:
 };
 
 #endif
+
+/*Slowa kluczowe protected, public, private decyduja w jakis sposob zostana odziedziczone elementy public i protected
+ klasy pierwotnej. Elementy z private, zawsze sa dziedziczone w ten sam sposob i sa ukryte przez klasa pochodna.
+ 
+ Wywolanie zmiennej statycznej nawet w klasach pochodnych odzwierciedla liczbe wszystkich obiektow utworzonych z klasy 
+ Human, nawet tych co dziedziczą po niej.
+ 
+ Możliwa jest konwersja klasy pochodnej do bazowej, bo jest jakby nia. Zostana wtedy przypisane tylko te wartosci
+ ktore posiada klasa bazowa. Konwersja w druga strone nie jest mozliwa chyba ze sam ja zdefiniujemy wewnatrz klasy
