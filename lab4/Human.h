@@ -7,7 +7,7 @@ class Human{
 	char name[10];
 	char surname[25];
 protected:
-	void  *wsk;
+	void  *wsk=0;
 public:
 	static int ile;
 	int get_ile();
