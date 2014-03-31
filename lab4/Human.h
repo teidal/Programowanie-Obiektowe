@@ -25,7 +25,6 @@ public:
 	char* get_surname();
 
 	Human(int );
-	//Human(int, int, char, char*, char*);
 	~Human();
 
 };
