@@ -42,14 +42,7 @@ Human::Human(int r){
 	set_surname("Kowalski");
 	wsk = new int[r];
 }
-/*Human::Human(int r, int a=30, char s='M', char *n="Jan", char *sn="Kowalski"){
-	ile++;
-	set_age(a);
-	set_sex(s);
-	set_name(n);
-	set_surname(sn);
-	wsk = new int[r];
-}*/
+
 Human::~Human(){
-	delete(wsk);
+	if(wsk != 0) delete [] wsk;
 }
