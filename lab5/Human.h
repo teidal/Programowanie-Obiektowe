@@ -41,3 +41,6 @@ public:
 };
 
 #endif
+
+/*Destruktor musi byc wirtualny, aby zapewnic ze wykonane zostana destruktory klas pochodnyhc
+co zapewni usuniecie wszystkich dynamicznych tablic*/
