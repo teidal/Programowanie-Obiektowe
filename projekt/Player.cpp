@@ -3,23 +3,38 @@
 
 Player::Player()
 {
-	
+	for (int i = 0; i < 5; i++)
+		add_to_hand();
 }
 
 Player::~Player()
 {
-
 }
 
-void Player::add_to_hand(Card card)
+void Player::set_points(int n)
 {
-	hand.push_back(card);
+	points = n;
+}
+
+int Player::get_points()
+{
+	return points;
+}
+
+void Player::increase_points()
+{
+	points++;
+}
+
+void Player::add_to_hand()
+{
+	hand.push_back(remove_top_deck());
 }
 
 Card Player::remove_from_hand(int n)
 {
-	Card holder = hand[n];
-	hand.erase(hand.begin() + n);
+	Card holder = hand[n-1];
+	hand.erase(hand.begin() + n-1);
 	return holder;
 }
 
@@ -28,8 +43,8 @@ void Player::display_hand()
 	std::cout << "Your hand: \n";
 	for (unsigned int i = 0; i < hand.size(); i++)
 	{
-		std::cout << hand[i].get_name() << "  " 
-		<< hand[i].get_power() << "/" << hand[i].get_health();
+		hand[i].display_card();
+		std::cout << "\n";
 	}
 }
 int Player::get_hand_size()

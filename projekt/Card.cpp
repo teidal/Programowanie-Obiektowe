@@ -16,7 +16,7 @@ Card::~Card()
 
 void Card::set_name(std::string name)
 {
-	this -> name = name;
+	this->name = name;
 }
 std::string Card::get_name()
 {
@@ -25,7 +25,7 @@ std::string Card::get_name()
 
 void Card::set_power(int power)
 {
-	this -> power = power;
+	this->power = power;
 }
 int Card::get_power()
 {
@@ -34,9 +34,14 @@ int Card::get_power()
 
 void Card::set_health(int health)
 {
-	this -> health = health;
+	this->health = health;
 }
 int Card::get_health()
 {
 	return health;
+}
+
+void Card::display_card()
+{
+	std::cout << get_name() << "  " << get_power() << "/" << get_health() << "\n";
 }

@@ -21,6 +21,8 @@ public:
 
 	void set_health(int);
 	int get_health();
+
+	void display_card();
 };
 
 #endif

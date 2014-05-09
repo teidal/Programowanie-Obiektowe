@@ -14,11 +14,11 @@ public:
 
 	void display_deck(); //wyswietlanie+
 	void shuffle_deck(); //tasowanie+
-	void shift_deck(); //przelozenie
+	void shift_deck(unsigned int); //przelozenie+
 
-	void add_top(Card); //dodanie do konca+
-	Card remove_top(); //usuniecie z konca+
-	Card remove_target(int); //usuniecie dowolnego+
+	void add_top_deck(Card); //dodanie do konca+
+	Card remove_top_deck(); //usuniecie z konca+
+	Card remove_target_deck(int); //usuniecie dowolnego+
 	void add_to_deck(int, Card); //dodanie do dowolnego+
 	
 	int get_size();
