@@ -33,7 +33,7 @@ void Deck::display_deck()
 
 void Deck::shuffle_deck()
 {
-	std::random_shuffle( deck.begin(), deck.end() );
+	std::random_shuffle( deck.begin(), deck.end());
 }
 
 Card Deck::remove_top_deck()

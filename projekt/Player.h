@@ -3,11 +3,12 @@
 #include <vector>
 #include "Deck.h"
 
-class Player : public Deck
+class Player
 {
 private:
 	std::vector <Card> hand;
 	int points;
+	Deck deck;
 
 public:
 	

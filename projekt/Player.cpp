@@ -11,9 +11,9 @@ Player::~Player()
 {
 }
 
-void Player::set_points(int n)
+void Player::set_points(int points)
 {
-	points = n;
+	this->points = points;
 }
 
 int Player::get_points()
@@ -28,7 +28,7 @@ void Player::increase_points()
 
 void Player::add_to_hand()
 {
-	hand.push_back(remove_top_deck());
+	hand.push_back(deck.remove_top_deck());
 }
 
 Card Player::remove_from_hand(int n)

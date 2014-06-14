@@ -5,7 +5,7 @@ Card::Card()
 {
 
 }
-Card::Card(std::string name, int power, int health) : name(name), power(power), health(health)
+Card::Card(std::string name, int power, int health) : Name(name), power(power), health(health)
 {
 
 }
@@ -14,14 +14,6 @@ Card::~Card()
 
 }
 
-void Card::set_name(std::string name)
-{
-	this->name = name;
-}
-std::string Card::get_name()
-{
-	return name;
-}
 
 void Card::set_power(int power)
 {

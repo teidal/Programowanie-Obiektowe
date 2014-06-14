@@ -3,8 +3,10 @@
 
 #include "stdafx.h"
 #include "Player.h"
+#include <ctime>
 
-Card choose_card(Player& player){
+Card choose_card(Player& player)
+{
 	int decision;
 	std::cout << "choose your card" << std::endl;
 	player.display_hand();
@@ -27,7 +29,7 @@ Card choose_card(Player& player){
 		std::cout << std::string( 100, '\n' );
 		return player.remove_from_hand(5);
 	default:
-		std::cout << "Wybiore za ciebie";
+		std::cout << "I choose for you";
 		std::cout << std::string( 100, '\n' );
 		return player.remove_from_hand(2);
 	}
@@ -36,6 +38,8 @@ Card choose_card(Player& player){
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	std::srand(std::time(0));
+
 	Player player1, player2;
 	Card active1, active2;
 
@@ -70,11 +74,15 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		std::cout << "Player 1 points: " << player1.get_points() << std::endl <<
 			"Player 2 points: " << player2.get_points();
+
+		std::cout << std::endl;
+		system("pause");
 		std::cout << std::string( 100, '\n' );
+
 	}
 
 	if(player1.get_points() == 5) std::cout << "Player 1 wins!";
-	else std::cout << "Player 2 wins!";
+	else std::cout << "Player 2 wins! ";
 
 
 	system("pause");

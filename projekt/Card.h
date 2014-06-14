@@ -2,19 +2,18 @@
 #define CARD_H
 #include <iostream>
 #include <string>
-class Card
+#include "Name.h"
+
+class Card : public Name
 {
 protected:
-	std::string name;
+
 	int power, health;
 
 public:
 	Card();
 	Card(std::string, int, int);
 	~Card();
-
-	void set_name(std::string);
-	std::string get_name();
 
 	void set_power(int);
 	int get_power();
